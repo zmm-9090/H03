@@ -44,6 +44,8 @@
     )
   }
 
+
+
   /**
    * Quick object check - this is primarily used to tell
    * Objects from primitive values when we know the value
@@ -109,7 +111,7 @@
     var n = parseFloat(val);
     return isNaN(n) ? val : n
   }
-
+//xvxvxcbx
   /**
    * Make a map and return a function for checking if a key
    * is in that map.
