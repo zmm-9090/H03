@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+        <div id="app">
+            <input type="text"  v-model="data01">
+        </div>
+
+        <script>
+         
+            new Vue({
+                el:"#app",
+                data:{
+                    data01:"abc"
+
+                },
+                methods: {
+                    
+                },
+                //这就是侦听器  写上你要侦听的属性
+                watch: {
+                    //这个方法钟有两个参数
+                    // 参数1：该属性改变后的值
+                    // 参数2：该属性原来的值
+                    data01:function(newVal,oldVal){
+                        console.log("data01发生了改变")
+                        console.log(ov+"----"+nv)
+                    }
+                },
+            })
+
+            /**
+             *  开学之前  vue不讲了  
+             *  
+             *  todomvc吗？
+             * 
+             *  改编成vue版本！
+             * 
+             * 
+             * 
+            */
+        </script>
+</body>
+</html>

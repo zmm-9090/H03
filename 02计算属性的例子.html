@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body >
+        <div id="app">
+            <h1 >11111</h1>
+            第一个名字:  <input  type="text" v-model="firstname"><br>
+            第二名字：<input type="text" v-model="lastname">
+            全名：{{getName()}}
+            全名：{{getName()}}
+        </div>
+        <script>
+           
+            new Vue({
+                el:"#app",
+                data:{
+                    firstname:"Michael", // Michael Jordan
+                    lastname:"Jordan",
+                },
+                methods:{
+                    //这种实时监控数据改变的方法
+                    // 性能开销会很大  没有计算属性那样的缓存
+                   getName(){
+                       console.log(1111)
+                       //code.. 
+                    return  this.firstname+this.lastname
+                   }
+                }
+                
+                
+                //,
+                // computed: {
+                //     // 计算属性fullname所依赖的变量
+                //     // 如果发生了改变 计算属性会重新计算一次
+                //     // 得到新得值然后 被返回
+                //     // 否则的话 ，这个值会一直存在内存中被复用
+                //     fullname:function(){
+                //         console.log("执行了一次")
+                //        return this.firstname+this.lastname 
+                //     }
+                // },
+            })
+        </script>
+</body>
+</html>

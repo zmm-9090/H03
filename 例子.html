@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        第一个名字：<input type="text" v-model="firstname"><br>
+        第二个名字：<input type="text" v-model="lastname">
+        全名：{{getName()}}
+        全名：{{getName()}}
+    </div>
+    <script>
+        new Vue({
+         el:"#app",
+         data:{
+             firstname:"Michael",
+             lastname:"Jordan",
+         },
+         
+         methods:{
+             getName(){
+                 console.log(1111)
+                 return  this.firstname+this.lastname
+             }
+         }
+
+
+        })
+    </script>
+</body>
+</html>

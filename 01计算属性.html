@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+        <div id="app">
+            <!-- {{}}  花括号内最好写简单的表达式  -->
+         <input type="text" v-model="message">
+         <p>{{message}}</p>
+            <hr>
+            <hr>
+            <!--  
+                reversedMessage 这个变量没有被申明在 data对象中
+            
+            -->
+          {{ reversedMessage }}
+        </div>
+        <script>
+            /**
+                计算属性和侦听器
+                用来监视数据的变化  并作出对应的响应
+            */
+                new Vue({
+                    el:"#app",
+                    // 数据对象
+                    data: {
+                       message:"hello" ,
+                         
+                    },
+                    methods: {
+                        
+                    },
+                    // 计算属性对象
+                    computed: {
+                        // 这个方法是 reversedMessage
+                        // 这个属性的get方法
+                        // 在改变message的时候
+                        // 这个getter方法会一直调用
+                        reversedMessage:function(){
+                            // code..
+                            return this.message.split('').reverse().join('') 
+                        } 
+                    },
+                })
+        </script>
+</body>
+</html>
